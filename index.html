@@ -7,30 +7,40 @@
     <meta name="description" content="AtomicVC invests in groundbreaking crypto projects: DeFi, NFTs, blockchain, and Web3 innovations.">
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background: #001122; color: #fff; }
-        header { background: #000; padding: 20px; text-align: center; }
+        header { background: #000; padding: 20px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 20px; }
+        header img { width: 120px; height: auto; filter: drop-shadow(0 0 10px #00BFFF); }
         nav { background: #002244; padding: 10px; text-align: center; }
         nav a { margin: 0 15px; text-decoration: none; color: #00BFFF; font-weight: bold; }
         .banner { position: relative; height: 400px; background: linear-gradient(135deg, #001122, #000); overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
         .particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(0,191,255,0.1) 1px, transparent 1px); background-size: 20px 20px; animation: float 10s infinite linear; }
         @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-20px); } }
         .banner .content { z-index: 1; }
-        .banner .logo { width: 100px; margin-bottom: 20px; filter: drop-shadow(0 0 10px #00BFFF); }
-        .banner button { background: #00BFFF; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; margin-top: 20px; }
+        .banner .logo { width: 150px; margin-bottom: 20px; filter: drop-shadow(0 0 10px #00BFFF); }
+        .banner a button { background: #00BFFF; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; margin-top: 20px; text-decoration: none; display: inline-block; }
         section { padding: 40px; max-width: 1200px; margin: auto; }
         .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .portfolio-item { background: #002244; padding: 20px; border-radius: 8px; border: 1px solid #00BFFF; }
+        .portfolio-item { background: #002244; padding: 20px; border-radius: 8px; border: 1px solid #00BFFF; text-align: center; }
+        .portfolio-item img { width: 100%; max-width: 200px; height: auto; margin-bottom: 10px; border-radius: 8px; }
         .team { display: flex; flex-wrap: wrap; gap: 20px; }
         .team-member { flex: 1 1 200px; text-align: center; }
+        .team-member img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 10px; object-fit: cover; }
         footer { background: #000; text-align: center; padding: 20px; }
+        footer .social-icons { display: flex; justify-content: center; gap: 20px; margin-top: 10px; }
+        footer .social-icons a { color: #00BFFF; text-decoration: none; }
+        footer .social-icons svg { width: 40px; height: 40px; transition: transform 0.2s; }
+        footer .social-icons svg:hover { transform: scale(1.1); }
         form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; background: #002244; border: 1px solid #00BFFF; color: #fff; border-radius: 5px; }
         button { background: #00BFFF; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
-        @media (max-width: 768px) { .portfolio { grid-template-columns: 1fr; } .team { flex-direction: column; } }
+        @media (max-width: 768px) { .portfolio { grid-template-columns: 1fr; } .team { flex-direction: column; } .footer .social-icons { flex-direction: column; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>AtomicVC</h1>
-        <p>Crypto VC for the Decentralized Future</p>
+        <img src="logo.png" alt="AtomicVC Logo">
+        <div>
+            <h1>AtomicVC</h1>
+            <p>Crypto VC for the Decentralized Future</p>
+        </div>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -44,28 +54,46 @@
         <div class="content">
             <img src="logo.png" alt="AtomicVC Logo" class="logo">
             <h1>Investing in the Atomic Age of Crypto</h1>
-            <p>Backing Decentralized Innovations in DeFi, Stablecoins, and Beyond</p>
-            <button>Apply for Funding</button>
+            <p>Backing Decentralized Innovations in DeFi, NFTs, and Beyond</p>
+            <a href="#contact"><button>Apply for Funding</button></a>
         </div>
     </div>
     <section id="about">
         <h2>About AtomicVC</h2>
-        <p>AtomicVC is a leading crypto venture capital firm, investing in projects that disrupt traditional finance. From DeFi protocols to Yield Bearing Stablecoins, we fuel atomic-level innovation in blockchain and Web3.</p>
+        <p>AtomicVC is a leading crypto venture capital firm, investing in projects that disrupt traditional finance. From DeFi protocols to NFT marketplaces, we fuel atomic-level innovation in blockchain and Web3.</p>
     </section>
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio">
             <div class="portfolio-item">
-                <h3>Blackhole</h3>
-                <p>Blackhole is a groundbreaking DEX designed to serve as the Unified Liquidity Hub for all blockchain projects on Avalanche.</p>
+                <img src="portfolio-defichain.png" alt="DeFiChain Project Image">
+                <h3>DeFiChain</h3>
+                <p>A decentralized exchange revolutionizing liquidity pools.</p>
             </div>
             <div class="portfolio-item">
-                <h3>WLFI</h3>
-                <p>Bridging legacy finance and the open economy with purpose-built, onchain products.</p>
+                <img src="portfolio-nftverse.png" alt="NFTVerse Project Image">
+                <h3>NFTVerse</h3>
+                <p>Building immersive metaverse experiences with NFTs.</p>
             </div>
             <div class="portfolio-item">
-                <h3>Arbitrum</h3>
-                <p>From apps to chains, Arbitrum delivers the performance and tooling your business needs to launch faster and scale further.</p>
+                <img src="portfolio-blocksecure.png" alt="BlockSecure Project Image">
+                <h3>BlockSecure</h3>
+                <p>Advanced security solutions for crypto wallets.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="portfolio-cryptowallet.png" alt="CryptoWallet Project Image">
+                <h3>CryptoWallet</h3>
+                <p>Next-gen multi-chain wallet for seamless crypto management.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="portfolio-metachain.png" alt="MetaChain Project Image">
+                <h3>MetaChain</h3>
+                <p>Interoperable blockchain for cross-platform dApps.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="portfolio-securedex.png" alt="SecureDEX Project Image">
+                <h3>SecureDEX</h3>
+                <p>Privacy-focused DEX with zero-knowledge proofs.</p>
             </div>
         </div>
     </section>
@@ -73,12 +101,14 @@
         <h2>Our Team</h2>
         <div class="team">
             <div class="team-member">
-                <h3>Abdullah Al Jawalal</h3>
-                <p>Founder, Blockchain Expert, Angel Investor, Managing Partner</p>
+                <img src="team-jane-doe.jpg" alt="Jane Doe, Managing Partner">
+                <h3>Jane Doe</h3>
+                <p>Managing Partner, Blockchain Expert</p>
             </div>
             <div class="team-member">
-                <h3>Noor Zarah</h3>
-                <p>Investment Director, DeFi Specialist, Business Developer</p>
+                <img src="team-john-smith.jpg" alt="John Smith, Investment Director">
+                <h3>John Smith</h3>
+                <p>Investment Director, DeFi Specialist</p>
             </div>
         </div>
     </section>
@@ -101,7 +131,18 @@
         </form>
     </section>
     <footer>
-        <p>&copy; 2026 AtomicVC. All rights reserved.</p>
+        <p>&copy; 2023 AtomicVC. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com/yourhandle" target="_blank" title="Follow us on Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+            <a href="https://t.me/yourchannel" target="_blank" title="Join us on Telegram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+            <a href="mailto:info@atomicvc.com" title="Email us">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
     </footer>
     <script>
         document.querySelector('form').addEventListener('submit', function(e) {
